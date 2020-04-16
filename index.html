@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Card</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: url('bg.jpg');
+            background-size: 100%;
+            position: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            width: 350px;
+            height: 430px;
+            background: #053570;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            perspective: 1000px;
+        }
+
+        .cover {
+            width: 350px;
+            height: 100%;
+            position: absolute;
+            left: 10px;
+            background-color: #053570;
+            transform: rotateY(3deg);
+            transform-style: preserve-3d;
+            transform-origin: left;
+            transition: all 1s ease-in;
+        }
+
+        .container:hover .cover {
+            transform: rotateY(-180deg);
+        }
+
+        figure {
+            margin: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        figure.back {
+            background: #7F00FF;
+            width: 100%;
+            height: 110%;
+            transform: rotateY(180deg);
+        }
+
+        .card-container {
+            width: 350px;
+            height: 530px;
+            background: #FFF;
+            border-radius: 6px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 1px 10px 1px #000;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .upper-container {
+            height: 250px;
+            background: #7F00FF;
+        }
+
+        .image-container {
+            background: white;
+            width: 180px;
+            height: 220px;
+            top: 10%;
+            border-radius: 50%;
+            border: 1rem solid rgb(255, 255, 255);
+            border-width: 10px;
+            transform: translate(85px, 50px);
+        }
+
+        .image-container img {
+            top: 10%;
+            width: 180px;
+            height: 220px;
+            border-radius: 80%;
+        }
+
+        .lower-container {
+            height: 280px;
+            background: #FFF;
+            padding: 20px;
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .lower-container h3,
+        h4 {
+            box-sizing: border-box;
+            margin-top: 20px;
+            line-height: .6;
+            font-weight: lighter;
+        }
+
+        .lower-container h4 {
+            color: rgb(135, 29, 240);
+            text-shadow: 2px 2px 4px #bdbbbd;
+            opacity: .6;
+            font-weight: bold;
+        }
+
+        .lower-container h4 b {
+            color: rgb(226, 222, 214);
+            font-size: 23px;
+            font-family: Impact, 'Permanent Marker', sans-serif;
+            text-shadow: 5px 2px 6px #060700;
+            opacity: .8;
+            font-weight: bold;
+        }
+
+        .lower-container ol {
+            font-size : 20px;
+            font-family: 'Permanent Marker','Arial Narrow Bold';
+            text-shadow: 2px 2px 4px #a3a0a3;
+            font-style: inherit;
+            color: rgb(20, 1, 22);
+            opacity: .7;
+            font-weight: bold;
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        .lower-container p {
+            text-align: justify;
+            font-size: 16px;
+            color: rgb(112, 108, 108);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card-container">
+            <div class="lower-container">
+                <div>
+
+                    <h4><b>How to protect yourself <br /><br /> and <br /><br />help stop coronavirus ?</b></h4><br />
+                    <h3>
+                        <ol>
+                            <li>Stay at home</li>
+                            <li>Keep a safe distance</li>
+                            <li>Wash your hands often</li>
+                            <li>Keep things clean</li>
+                            <li>Wear a cloth face mask</li>
+                            <li>Download Aarogya Setu </li>
+                        </ol>
+                    </h3>
+                    <br /><br />
+                    <h4><i>"Don't believe in rumours and <br /><br /> superstitions; don't take any<br /><br />
+                            medicines without consulting <br /><br /> doctors, says PM"</i>
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="cover">
+            <figure class="front">
+                <div class="card-container">
+
+                    <div class="upper-container">
+                        <div class="image-container">
+                            <img src="Pic.jpg"  />
+                        </div>
+                    </div>
+                    <div class="lower-container">
+                        <div>
+                            <h3>Ankit Saxena</h3>
+                            <h4>Student</h4><br />
+                        </div>
+                        <div>
+                            <p>Coronavirus or Covid-19 is, unfortunately, spreading through the entire world. What can we, as developers, do to make the situation better? A little contribution from me to help in preventing the spread of coronavirus.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </figure>
+            <figure class="back"> </figure>
+        </div>
+    </div>
+</body>
+
+</html>
